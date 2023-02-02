@@ -1,0 +1,61 @@
+@use 'variables';
+@use 'fonts';
+@use 'mixin';
+
+.time-saving {
+    width: 100%;
+    padding-top: 12.1875rem;
+    padding-bottom: 11.875rem;
+    overflow: hidden;
+
+    &_container {
+        position: relative;
+        width: 100%;
+        max-width: 28.5625rem;
+        margin: 0 auto;
+        padding: 0 0.625rem;
+        padding-left: 6.25rem;
+
+        &::before {
+            position: absolute;
+            top: -7.5rem;
+            left: -15.625rem;
+            content: "";
+            width: 20rem;
+            height: 25rem;
+            background: url('../img/avatar_dreads.png') center center no-repeat;
+            background-size: cover;
+        }
+
+        &::after {
+            position: absolute;
+            top: 2.5rem;
+            right: -14.6875rem;
+            content: "";
+            width: 26.6875rem;
+            height: 24.5625rem;
+            background: url('../img/present.png') center center no-repeat;
+            background-size: cover;
+        }
+    }
+
+    &_title {
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin-bottom: 2.1875rem;
+    }
+
+    &_description {
+        width: 18.125rem;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        margin-bottom: 2.0625rem;
+    }
+
+    &_subtitle {
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+    }
+}

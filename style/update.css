@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/roboto/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/roboto/Roboto-Medium.ttf");
+  font-weight: 500;
+}
+.update_body {
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url("../img/update_background.png") no-repeat center center;
+  background-size: cover;
+}
+.update_body.error {
+  background: none;
+}
+.update_balls-wrapper {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.update_ball-left {
+  position: absolute;
+  width: 40.625rem;
+  height: 40.625rem;
+  top: -12.5rem;
+  left: -12.5rem;
+  z-index: 0;
+}
+.update_ball-right {
+  position: absolute;
+  width: 21.875rem;
+  top: 12.5rem;
+  right: -6.25rem;
+  z-index: 0;
+}
+.update_ball-right.error {
+  width: 12.5rem;
+  top: 25rem;
+  right: -4.375rem;
+}
+.update_ball-bottom {
+  position: absolute;
+  width: 62.5rem;
+  left: 25%;
+  bottom: -43.75rem;
+  z-index: 0;
+}
+.update_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: url("../img/update_backgound-peaces.png") no-repeat center;
+  background-size: cover;
+}
+.update_content {
+  flex-grow: 0;
+  position: relative;
+  width: 100%;
+  max-width: 31.5625rem;
+  z-index: 1000;
+}
+.update_content::after {
+  position: absolute;
+  top: -6.25rem;
+  right: -80%;
+  content: "";
+  width: 28.125rem;
+  height: 34.375rem;
+  background: url("../img/avatar_producer.png") center center no-repeat;
+  background-size: cover;
+}
+.update_content.error_content {
+  width: 25rem;
+  position: relative;
+  top: -3.125rem;
+}
+.update_content.error_content::after {
+  display: none;
+}
+.update_content div {
+  display: flex;
+  justify-content: center;
+}
+.update_logo {
+  width: 100%;
+  margin-bottom: 3.125rem;
+}
+.update_logo.error {
+  max-width: 23.125rem;
+  margin-left: 0.625rem;
+}
+.update_title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 3.125rem;
+}
+.update_button {
+  display: inline-block;
+  background: linear-gradient(215.31deg, #F9F0C3 9.73%, #EFBB03 71.72%);
+  text-transform: uppercase;
+  outline: none;
+  border: none;
+  border-radius: 6.25rem;
+  color: #31456A;
+  box-shadow: 0 0 0.3125rem rgba(255, 219, 91, 0.6862745098);
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  padding: 0.875rem 5rem 0.8125rem 5rem;
+}
+.update_error_bg-text {
+  position: absolute;
+  top: 10%;
+  left: 24%;
+  font-size: 35.7368rem;
+  color: #EDEEF2;
+}/*# sourceMappingURL=update.css.map */

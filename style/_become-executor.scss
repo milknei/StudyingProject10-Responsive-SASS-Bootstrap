@@ -1,0 +1,54 @@
+@use 'variables';
+@use 'fonts';
+@use 'mixin';
+
+.become-executor {
+    width: 100%;
+    padding-top: 1.4375rem;
+
+    &_container {
+        box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 72.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.25rem;
+        background: url('../img/easyfest_background.png') no-repeat;
+        background-position: 0 50%;
+        background-size: contain;
+        margin: 0 auto;
+        padding: 0 0.9375rem;
+    }
+
+    &_content {
+        width: 19.6875rem;
+        margin-left: 6.25rem;
+    }
+
+    &_title {
+        font-weight: 500;
+        font-size: 2.1875rem;
+        line-height: 2.5625rem;
+        margin-bottom: 0.875rem;
+    }
+
+    &_description {
+        width: 18.75rem;
+        font-size: 0.875rem;
+        line-height: 1.1875rem;
+        margin-bottom: 1.875rem;
+    }
+
+    &_button {
+        @include mixin.main-button;
+    }
+
+    &_image {
+        img {
+            width: 100%;
+            max-width: 46.875rem;
+        }
+    }
+}

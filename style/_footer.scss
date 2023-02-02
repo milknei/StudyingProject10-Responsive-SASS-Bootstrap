@@ -1,0 +1,119 @@
+@use 'variables';
+@use 'fonts';
+@use 'mixin';
+
+.footer {
+    width: 100%;
+    background-color: #4097E3;
+    padding-top: 1.875rem;
+    padding-bottom: 1.125rem;
+
+    &_container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 69.875rem;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 0 0.625rem;
+    }
+
+    &_content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &_links {
+        width: 100%;
+        max-width: 50rem;
+        display: flex;
+        justify-content: space-between;
+
+        &_list {
+            flex-basis: 8.125rem;
+        }
+
+        &_item {
+            margin-bottom: 0.625rem;
+        }
+
+        &_link {
+            font-size: 0.875rem;
+            line-height: 1rem;
+            color: #FFFFFF;
+
+            &:hover {
+                color: #64B1F3;
+            }
+        }
+
+        &_title {
+            color: #64B1F3;
+        }
+    }
+
+    .fa-brands {
+        font-size: 0.9375rem;
+        color: #9ECDF6;;
+        margin-right: 0.9375rem;
+
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+
+    &_apps {
+        flex-basis: 15.625rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 2.25rem;
+
+        &_item {
+            display: inline-block;
+            width: 6rem;
+            height: 1.9375rem;
+            background: #9ECDF6;
+            border-radius: 0.3125rem;
+            padding: 0.25rem 0.75rem 0.1875rem 0.5625rem;
+
+            &:hover {
+                background: #FFFFFF;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &_copyright {
+        display: flex;
+        justify-content: space-between;
+        min-height: 1.25rem;
+
+        &-rules {
+            align-self: flex-end;
+            font-size: 0.5rem;
+            line-height: 0.5625rem;
+            color: #FFFFFF;
+
+            a {
+                color: #FFFFFF;
+                text-decoration: underline;
+            }
+        }
+
+        &-developer {
+            align-self: flex-start;
+            font-size: 0.5rem;
+            line-height: 1.375rem;
+            color: #9ECDF6;
+
+            img {
+                width: 1.625rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+@use 'variables';
+@use 'fonts';
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin main-button($padding-x:2.6875rem) {
+    background: linear-gradient(215.31deg, #F9F0C3 9.73%, #EFBB03 71.72%);
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    border-radius: 6.25rem;
+    color: variables.$dark_blue;
+    box-shadow: 0 0 0.3125rem #ffdb5baf;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    padding: 0.875rem $padding-x 0.8125rem $padding-x;
+}
+
+@mixin slider-indicator {
+    display: none;
+    text-align: center;
+
+    span {
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background: #D2D9E5;
+        margin-right: 0.4375rem;
+
+        &.active {
+            background: #FFD93B;
+        }
+    }
+}
+
+@mixin switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 17px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    span {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        box-shadow: inset -3px -3px 7px #FFFFFF, inset 1px 1px 3px rgba(136, 165, 191, 0.48);
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 34px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 1px;
+            bottom: 1px;
+            background: radial-gradient(#EDF0FD 44.27%, #F9FAFF 100%);;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+    }
+
+    input:checked + span {
+        background: linear-gradient(215.31deg, #64DBF5 9.73%, #2567E7 71.72%);
+        box-shadow: inset 3px 3px 7px #2E127C, inset 1px 1px 3px rgba(136, 165, 191, 0.48);
+    }
+
+    input:checked + span::before {
+        -webkit-transform: translateX(19px);
+        -ms-transform: translateX(19px);
+        transform: translateX(19px);
+    }
+
+    input:checked + span + label {
+        color: variables.$dark_blue;
+    }
+}

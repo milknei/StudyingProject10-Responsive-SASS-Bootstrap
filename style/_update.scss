@@ -1,0 +1,139 @@
+@use 'variables';
+@use 'fonts';
+@use 'mixin';
+
+.update {
+    &_body {
+        box-sizing: border-box;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: url('../img/update_background.png') no-repeat center center;
+        background-size: cover;
+
+        &.error {
+            background: none;
+        }
+    }
+
+    &_balls-wrapper {
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &_ball {
+        &-left {
+            position: absolute;
+            width: 40.625rem;
+            height: 40.625rem;
+            top: -12.5rem;
+            left: -12.5rem;
+            z-index: 0;
+        }
+        
+        &-right {
+            position: absolute;
+            width: 21.875rem;
+            top: 12.5rem;
+            right: -6.25rem;
+            z-index: 0;
+
+            &.error {
+                width: 12.5rem;
+                top: 25rem;
+                right: -4.375rem;
+            }
+        }
+        
+        &-bottom {
+            position: absolute;
+            width: 62.5rem;
+            left: 25%;
+            bottom: -43.75rem;
+            z-index: 0;
+        }
+    }
+
+    &_wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include mixin.flex-center;
+        overflow: hidden;
+        background: url('../img/update_backgound-peaces.png') no-repeat center;
+        background-size: cover;
+    }
+    
+    &_content {
+        flex-grow: 0;
+        position: relative;
+        width: 100%;
+        max-width: 31.5625rem;
+        z-index: 1000;
+
+        &::after {
+            position: absolute;
+            top: -6.25rem;
+            right: -80%;
+            content: "";
+            width: 28.125rem;
+            height: 34.375rem;
+            background: url('../img/avatar_producer.png') center center no-repeat;
+            background-size: cover;
+        }
+
+        &.error_content {
+            width: 25rem;
+            position: relative;
+            top: -3.125rem;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &_logo {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        &.error {
+            max-width: 23.125rem;
+            margin-left: 0.625rem;
+        }
+    }
+
+    &_title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin-bottom: 3.125rem;
+    }
+
+    &_button {
+        display: inline-block;
+        @include mixin.main-button(5rem);
+    }
+
+    &_error_bg-text {
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        font-size: 35.7368rem;
+        color: #EDEEF2;
+    }
+}

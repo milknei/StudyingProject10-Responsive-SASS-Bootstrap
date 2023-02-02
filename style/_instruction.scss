@@ -1,0 +1,85 @@
+@use 'variables';
+@use 'fonts';
+@use 'mixin';
+
+.instruction {
+    width: 100%;
+    margin-top: 8.75rem;
+
+    &_mobile {
+        &_title {
+            display: none;
+        }
+    }
+
+    &_container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 75rem;
+        @include mixin.flex-center;
+        padding: 0 0.625rem;
+        margin: auto;
+    }
+
+    &_content {
+        width: 100%;
+        max-width: 28.125rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3125rem;
+    }
+
+    &_image {
+        img {
+            width: 100%;
+            max-width: 38.75rem;
+        }
+    }
+    &_title {
+        font-weight: 500;
+        font-size: 2.1875rem;
+        line-height: 2.5625rem;
+        margin-bottom: 2.1875rem;
+    }
+
+    &_step {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 7.8125rem;
+        }
+
+        &_description {
+            width: 11.875rem;
+            font-size: 0.875rem;
+            line-height: 1rem;
+        }
+
+        &:nth-child(1) {
+            img {
+                margin-right: 1.875rem;
+            }
+        }
+
+        &:nth-child(2) {
+            img {
+                margin-left: 3.75rem;
+                margin-right: 0.625rem;
+            }
+        }
+
+        &:nth-child(3) {
+            img {
+                margin-right: 0.75rem;
+            }
+        }
+    }
+
+    &_button {
+        @include mixin.main-button;
+        margin-top: 3.625rem;
+        margin-left: 0.625rem;
+    }
+}

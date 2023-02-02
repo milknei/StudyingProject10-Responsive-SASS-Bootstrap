@@ -1,0 +1,66 @@
+@use 'variables';
+@use 'fonts';
+@use 'mixin';
+
+.header {
+    width: 100%;
+    padding-top: 1.875rem;
+    padding-bottom: 1.25rem;
+    
+    &_container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 69.6875rem;
+        @include mixin.flex-center;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 0 0.625rem;
+    }
+    
+    &_navbar {
+        @include mixin.flex-center;
+        gap: 2.5rem;
+        
+        &-logo {
+        display: inline-block;
+        border-radius: 50%;
+        box-shadow: 0 0 0.3125rem #f5f8f975;
+        
+            &-image {
+                width: 3.3125rem;
+            }
+        }
+
+        &-list {
+            @include mixin.flex-center;
+            gap: 1.875rem;
+        }
+
+        &-link {
+            font-size: 1rem;
+            line-height: 1.1875rem;
+        }
+    }
+
+    &_login-button {
+        @include mixin.main-button(4.0625rem);
+        font-size: 0.875rem;
+        line-height: 1rem;
+    }
+
+    &_mobile {
+        &_menu {
+            &-button {
+                display: none;
+            }
+
+            &-icon {
+                display: none;
+            }
+        }
+
+        &_profile {
+            display: none;
+        }
+    }
+}

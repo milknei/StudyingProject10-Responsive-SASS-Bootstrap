@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./fontawesome-free-6.2.0-web/css/all.css" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <title>EasyFest</title>
+</head>
+<body class="task-creation_body">
+    <header class="header">
+        <div class="header_container">
+            <nav class="header_navbar">
+                <a href="./index.html" class="header_navbar-logo">
+                    <img src="./img/logo_buttton.png" alt="logo" class="header_navbar-logo-image" />
+                </a>
+                <ul class="header_navbar-list">
+                    <li class="header_navbar-item">
+                        <a href="./task_creation.html" class="header_navbar-link">Создать задание</a>
+                    </li>
+                    <li class="header_navbar-item">
+                        <a href="#" class="header_navbar-link">Найти задание</a>
+                    </li>
+                    <li class="header_navbar-item">
+                        <a href="#" class="header_navbar-link">Исполнители</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header_login-button">Авторизуйтесь</button>
+            <button class="header_mobile_menu-button">
+                <div class="header_mobile_menu-icon">
+                    <p class="header_mobile_menu-line"></p>
+                    <p class="header_mobile_menu-line"></p>
+                    <p class="header_mobile_menu-line"></p>
+                </div>
+            </button>
+            <a href="#" class="header_mobile_profile"><img src="./img/roma_logo.jpg" alt="Roma" class="header_mobile_profile-image" /></a>
+        </div>
+    </header>
+    <main class="task-creation_main">
+        <h2 class="task-creation_main_title_mobile">Стоимость одной  категории 100 ₽</h2>
+        <p class="task-creation_main_subtitle_mobile">*Первый месяц подписка на выбранные категории бесплатна</p>
+        <h2 class="task-creation_main_title">Выбирите категорию</h2>
+        <form action="" class="task-creation_main_form">
+            <ul class="task-creation_main_list">
+                <li class="task-creation_main_list-title">Транспорт</li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="car_with_driver">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="car_with_driver">Авто с водителем</label>
+                    </label>
+                </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="car_for_rent">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="car_for_rent">Авто на прокат</label>
+                    </label>
+                </li>
+            </ul>
+            <ul class="task-creation_main_list">
+                <li class="task-creation_main_list-title">Площадки</li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="restorants">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="restorants">Рестораны</label>
+                    </label>
+                </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="cafe">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="cafe">Кафе</label>
+                    </label>
+                </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="banqueting_hall">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="banqueting_hall">Банкетные залы</label>
+                    </label>
+                </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="playgrounds">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="playgrounds">Детские площадки</label>
+                    </label>
+                </li>
+            </ul>
+            <ul class="task-creation_main_list">
+                <li class="task-creation_main_list-title">Декор, инвентарь </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="baloons">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="baloons">Шарики</label>
+                    </label>
+                </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="phlora">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="phlora">Флористика</label>
+                    </label>
+                </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="decoration">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="decoration">Декор</label>
+                    </label>
+                </li>
+            </ul>
+            <ul class="task-creation_main_list">
+                <li class="task-creation_main_list-title">Персонал</li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="leaders">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="leaders">Ведущие</label>
+                    </label>
+                </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="animators">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="animators">Аниматоры</label>
+                    </label>
+                </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="photos">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="photos">Фото/видеосъемка</label>
+                    </label>
+                </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="stylists">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="stylists">Стилисты</label>
+                    </label>
+                </li>
+            </ul>
+            <ul class="task-creation_main_list">
+                <li class="task-creation_main_list-title">Кейтеринг</li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="staff">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="staff">Персонал</label>
+                    </label>
+                </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="katering">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="katering">Кейтеринг под ключ</label>
+                    </label>
+                </li>
+            </ul>
+            <ul class="task-creation_main_list">
+                <li class="task-creation_main_list-title">Артисты</li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="singers">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="singers">Певцы</label>
+                    </label>
+                </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="musicians">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="musicians">Музыканты</label>
+                    </label>
+                </li>
+            </ul>
+            <ul class="task-creation_main_list">
+                <li class="task-creation_main_list-title">Праздник под ключ </li>
+                <li class="task-creation_main_list-item">
+                    <label class="task-creation_main_switch">
+                        <input type="checkbox" id="full_construction">
+                        <span class="task-creation_main_slider"></span>
+                        <label class="task-creation_main_switch-label" for="full_construction">Праздник под ключ</label>
+                    </label>
+                </li>
+            </ul>
+        </form>
+        <div class="task-creation_main_buttons">
+            <button class="task-creation_main_back">ВЕРНУТЬСЯ НАЗАД</button>
+            <button class="task-creation_main_back_mobile">НАЗАД</button>
+            <p class="task-creation_main_step"><span>1</span> шаг из <span>7</span></p>
+            <button class="task-creation_main_next">СЛЕДУЮЩИЙ ШАГ</button>
+            <button class="task-creation_main_next_mobile">ВПЕРЕД</button>
+        </div>
+    </main>
+</body>
+</html>

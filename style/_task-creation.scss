@@ -1,0 +1,146 @@
+@use 'variables';
+@use 'fonts';
+@use 'mixin';
+
+.task-creation {
+    &_body {
+        position: relative;
+        
+        .header {
+            background-color: #80C3F4;
+            padding-bottom: 180px;
+            background-image: url('../img/task_creation-bg.png');
+            background-size: contain;
+            background-position: center bottom;
+            background-repeat: no-repeat;  
+            
+            &_navbar {
+                &-link {
+                    color: variables.$dark_blue;
+                }
+            }
+
+            &_login-button {
+                background: #FFFFFF;
+                box-shadow: none;
+            }
+        }    
+    }
+    
+    &_main {
+        box-sizing: border-box;
+        z-index: 100;
+        padding: 40px;
+        background: #FFFFFF;
+        
+        &_title {
+            text-align: center;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 60px;
+
+            &_mobile {
+                display: none;
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+        
+        &_subtitle_mobile {
+            display: none;
+            font-size: 10px;
+            line-height: 12px;
+            color: #8CA2B7;
+        }
+        
+        &_switch {
+            @include mixin.switch;
+            margin-left: 0;
+
+            &-label {
+                position: relative;
+                bottom: 15.5px;
+                left: 50px;
+                display: inline-block;
+                width: 150px;
+                color: #8CA2B7;
+                line-height: 5px;
+            }
+        }
+        
+        &_form {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        
+        &_list {
+            width: 100%;
+            max-width: 270px;
+            
+            & > * {
+                margin-bottom: 10px;
+            }
+
+            &-title {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &_buttons {
+            width: 100%;
+            max-width: 700px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        &_back, &_back_mobile {
+            @include mixin.main-button(50px);
+            background: linear-gradient(215.31deg, #64DBF5 9.73%, #2567E7 71.72%);
+            box-shadow: none;
+            color: #FFFFFF;
+
+            &_mobile {
+                display: none;
+                font-size: 12px;
+                line-height: 14px;
+                padding: 14px 40px;
+            }
+
+            &:hover {
+                color: #31456A;
+            }
+        }
+
+        &_step {
+            font-size: 16px;
+            line-height: 19px;
+            color: #8CA2B7;
+        }
+
+        &_next, &_next_mobile {
+            @include mixin.main-button(50px);
+            color: #FFFFFF;
+
+            &_mobile {
+                display: none;
+                font-size: 12px;
+                line-height: 14px;
+                padding: 14px 40px;
+            }
+
+            &:hover {
+                color: #31456A;
+            }
+        }
+    }
+}

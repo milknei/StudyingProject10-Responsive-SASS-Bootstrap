@@ -1,0 +1,149 @@
+@use 'variables';
+@use 'fonts';
+@use 'mixin';
+
+.reviews {
+    width: 100%;
+    padding-top: 12.5rem;
+    margin-bottom: 3.75rem;
+
+    &_container {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 75rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        padding: 0 0.625rem;
+    }
+
+    &_image {
+        img {
+            width: 100%;
+            max-width: 38.75rem;
+        }
+    }
+
+    &_content {
+        max-width: 31.25rem;
+        justify-self: flex-start;
+    }
+
+    &_title {
+        font-weight: 500;
+        font-size: 2.1875rem;
+        line-height: 2.5625rem;
+        margin-bottom: 3.75rem;
+    }
+
+    &_header {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        border-bottom: 0.0625rem solid #D6E4F0;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.875rem;
+
+        &_avatar {
+            width: 3.75rem;
+            height: 3.75rem;
+            flex-shrink: 0;
+            @include mixin.flex-center;
+            background-image: url('../img/review_circles.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            img {
+                width: 2.75rem;
+                height: 2.75rem;
+            }
+        }
+
+        &_name {
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.1875rem;
+        }
+
+        &_statistic {
+            font-size: 0.875rem;
+            line-height: 1rem;
+            color: #8CA2B7;
+
+            span {
+                position: relative;
+                display: inline-block;
+                font-size: 0.9375rem;
+                margin-left: 0.9375rem;
+            }
+
+            &-likes {
+                &::before {
+                    display: inline-block;
+                    content: '';
+                    width: 0.9375rem;
+                    height: 0.9375rem;
+                    background-image: url('../img/like.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    margin-right: 0.3125rem;
+                }
+            }
+            
+            &-dislikes {
+                &::before {
+                    position: relative;
+                    top: 0.1875rem;
+                    display: inline-block;
+                    content: '';
+                    width: 0.9375rem;
+                    height: 0.9375rem;
+                    background-image: url('../img/like.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    margin-right: 0.3125rem;
+                    rotate: 180deg;
+                }
+            }
+
+            &-stars {
+                &::after {
+                    position: relative;
+                    top: 0.1875rem;
+                    display: inline-block;
+                    content: '';
+                    width: 1.0625rem;
+                    height: 1.0625rem;
+                    background-image: url('../img/star.png');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    margin-right: 0.3125rem;
+                }
+            }
+
+            &_tasks {
+                font-size: 0.875rem;
+                line-height: 1rem;
+                color: #8CA2B7;
+                margin: 0;
+            }
+        }
+
+    }
+
+    &_slider-indicator {
+        @include mixin.slider-indicator;
+        display: none;
+        margin-top: 0.9375rem;
+    }
+
+    &_description {
+        font-size: 0.875rem;
+        line-height: 1rem;
+    }
+}
